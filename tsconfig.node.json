@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "target": "ESNext",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "ts-node": {
+    // 启用swc编译ts，加速，开启后需安装@swc/core
+    "swc": false
+  },
+  "include": ["build/**/*.ts", "webpack.config.ts"]
+}

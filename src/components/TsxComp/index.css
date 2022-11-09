@@ -1,0 +1,9 @@
+.tsx-comp {
+  text-align: center;
+  padding-top: 50px;
+  height: 40%;
+  background-image: url('@/assets/images/image1.jpg');
+}
+button {
+  cursor: pointer;
+}

@@ -1,0 +1,92 @@
+{
+  "name": "webpack5-vue3-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node ./build/bin.js serve",
+    "build": "node ./build/bin.js build",
+    "build:test": "node ./build/bin.js build --mode test",
+    "report": "node ./build/bin.js build --report",
+    "preview": "node ./build/bin.js build --preview",
+    "preview:test": "node ./build/bin.js build --mode test --preview",
+    "eslint": "eslint src/**/*.{js,jsx,ts,tsx,vue}",
+    "eslint:fix": "eslint src/**/*.{js,jsx,ts,tsx,vue} --fix",
+    "prepare": "husky install",
+    "commit": "git-cz"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@aegis.inc/eslint-config-aegis": "^1.0.0",
+    "@babel/core": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "@babel/preset-typescript": "^7.18.6",
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
+    "@types/connect": "^3.4.35",
+    "@types/dotenv-webpack": "^7.0.3",
+    "@types/node": "^18.11.7",
+    "@types/serve-static": "^1.15.0",
+    "@types/webpack": "^5.28.0",
+    "@types/webpack-bundle-analyzer": "^4.6.0",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "@vue/babel-plugin-jsx": "^1.1.1",
+    "@vue/compiler-sfc": "^3.2.41",
+    "babel-loader": "^9.0.0",
+    "babel-preset-env": "^1.7.0",
+    "chalk": "4.1.2",
+    "compression-webpack-plugin": "^10.0.0",
+    "connect": "^3.7.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "dotenv-webpack": "^8.0.1",
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.7.0",
+    "git-cz": "^4.9.0",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.2",
+    "less-loader": "^11.1.0",
+    "lint-staged": "^13.0.3",
+    "mini-css-extract-plugin": "^2.6.1",
+    "portfinder": "^1.0.32",
+    "postcss-loader": "^7.0.1",
+    "postcss-preset-env": "^7.8.2",
+    "prettier": "^2.7.1",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.1.0",
+    "serve-static": "^1.15.0",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.6",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4",
+    "vue-loader": "^17.0.1",
+    "webpack": "^5.74.0",
+    "webpack-bundle-analyzer": "^4.7.0",
+    "webpack-chain": "^6.5.1",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.6",
+    "vue": "^3.2.41"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue,ts,jsx,tsx}": [
+      "eslint --fix"
+    ],
+    "src/**/*.{css,less,scss,md,json}": [
+      "prettier --write ."
+    ]
+  }
+}
