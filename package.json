@@ -73,6 +73,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "core-js": "^3.35.0",
     "dayjs": "^1.11.6",
     "vue": "^3.2.41"
   },
@@ -88,5 +89,6 @@
     "*.{css,less,scss,md,json}": [
       "prettier --write"
     ]
-  }
+  },
+  "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead"
 }

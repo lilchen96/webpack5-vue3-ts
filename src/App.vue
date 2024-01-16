@@ -18,5 +18,10 @@ console.log(dayjs().format('yyyy-mm-dd'));
 
 console.log(process.env.mode, process.env.name, '');
 console.log(121231);
+const p = Promise.resolve('p');
+const arr: string[] = [];
+arr.includes('1');
+console.log(arr ?? '1111');
+console.log(arr ?? '111');
 </script>
 <style lang="scss"></style>
