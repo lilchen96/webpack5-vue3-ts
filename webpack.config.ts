@@ -53,8 +53,10 @@ const defineConfig: DefineWebpackConfig = (config, { behavior, mode, argv }) => 
     config.plugin('HtmlWebpackPlugin').tap((args) => [
       {
         ...args[0],
-        js: files.js.map((item) => `<script src="${item}"></script>`).join(''),
-        css: files.css.map((item) => `<link href=${item} rel="stylesheet" />`).join('')
+        js: files.js.map((item) => `<script defer src="${item}"></script>`).join(''),
+        css: files.css
+          .map((item) => `<link rel="preload" href=${item} rel="stylesheet" />`)
+          .join('')
       }
     ]);
   }

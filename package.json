@@ -82,11 +82,11 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,vue,ts,jsx,tsx}": [
+    "*.{js,vue,ts,jsx,tsx}": [
       "eslint --fix"
     ],
-    "src/**/*.{css,less,scss,md,json}": [
-      "prettier --write ."
+    "*.{css,less,scss,md,json}": [
+      "prettier --write"
     ]
   }
 }
